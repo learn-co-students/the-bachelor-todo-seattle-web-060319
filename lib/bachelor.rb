@@ -9,9 +9,9 @@ end
 
 def get_contestant_name(data, occupation)
   data.each do |season, person|
-    person.each do |statss|
-      if statss["occupation"] == occupation
-          return statss["name"]
+    person.each do |info|
+      if info["occupation"] == occupation
+          return info["name"]
              #binding.pry
       end
     end
@@ -19,15 +19,15 @@ def get_contestant_name(data, occupation)
 end
 
 def count_contestants_by_hometown(data, hometown)
-  counter = 0
+  counter = 0 
   data.each do |season, person|
     person.each do |info|
-      if info["hometown"] == hometown
-        binding.pry
-        info["hometown"] += 1 
-      end
+      if info["hometown"] == hometown 
+        counter += 1
+      end 
     end
   end
+  counter
 end
 
 def get_occupation(data, hometown)
