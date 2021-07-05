@@ -1,3 +1,4 @@
+
 describe "bachelor" do 
 
   let(:data) { JSON.parse(File.read('spec/fixtures/contestants.json')) }
